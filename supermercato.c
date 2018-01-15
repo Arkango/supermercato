@@ -62,7 +62,7 @@ int main(){
 void getSupermarket(supermarket VETT[],int i){
   supermarket info;
   //procedura che riempie l'array dei supermermercati
-  printf("Stai inserendo il supermecato con codice %d \n",i+1);
+  printf("\n\nStai inserendo il supermecato con codice %d \n",i+1);
   info.codice = i;
   printf("Inserisci nome responsabile\n");
   scanf("%s",info.name);
@@ -72,8 +72,9 @@ void getSupermarket(supermarket VETT[],int i){
   scanf("%s",info.address);
   printf("Inserisci citta' responsabile\n");
   scanf("%s",info.city);
-
-
-
+  printf("Inserisci numero dipendenti responsabile\n");
+  scanf("%d",&info.n_employers);
+  printf("Inserisci fatturato del passto anno responsabile\n");
+  scanf("%d",&info.revenue);
   VETT[i] = info;
 }

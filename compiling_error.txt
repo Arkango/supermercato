@@ -1,7 +1,0 @@
-/var/www/html/supermercato/supermercato.c: In function ‘getSupermarket’:
-/var/www/html/supermercato/supermercato.c:68:14: warning: implicit declaration of function ‘strlwr’ [-Wimplicit-function-declaration]
-   scanf("%s",strlwr(info.name));
-              ^~~~~~
-/tmp/ccRGxNPv.o: In function `getSupermarket':
-supermercato.c:(.text+0xf5): undefined reference to `strlwr'
-collect2: error: ld returned 1 exit status
