@@ -21,14 +21,16 @@
 
 //varibili globali
 #define MAXVALORI 100
+#define CHARLENGHT 50
+static int MAXPOS[MAXVALORI]
 
 //definizione tipi
 typedef struct{
   int codice;
-  char name[50];
-  char surname[50];
-  char address[50];
-  char city[50];
+  char name[CHARLENGHT];
+  char surname[CHARLENGHT];
+  char address[CHARLENGHT];
+  char city[CHARLENGHT];
   int n_employers;
   int revenue;
 }supermarket;
@@ -39,7 +41,8 @@ void getSupermarket(supermarket VETT[],int i);
 //programma principale
 int main(){
 
-  int N,i;
+  int N,i,choice;
+  char citta[CHARLENGHT],nome[CHARLENGHT];
   supermarket SUPER[MAXVALORI];
 
   do{
@@ -50,14 +53,35 @@ int main(){
         }
   }while(N <= 0  || N > MAXVALORI);
 
-  printf("Inserisci supermercati\n");
+  printf("Inserisci supermercati\n\n");
 
-  for (i = 0; i < N; i++) {
+  for (i = 0; i < N; i++) {//inserimento supermercati
       getSupermarket(SUPER,i);
   }
 
+  do {
+    printf("****  Menu' (alla scelta termina programma vedrai sup. con max dipendenti) ****\n");
+    printf("****  0 termina programma  ****\n");
+    printf("****  1 cerca per nome supervisore supermercati corrrelati  ****\n");
+    printf("****  2 cerca supermercati nella citta'  ****\n");
+    switch (choice) {
+      case 0:
+          showSupermarketMaxEmployeers();
+        break;
+      case 1:
+          printf("Inserisci nome responsabile che vuoi cercare (Case-Sensitive)\n");
+          scanf("%s",nome);
+          lookForName(nome);
+        break;
+      case 2 :
+      printf("Inserisci citta' che vuoi cercare (Case-Sensitive)\n");
+      scanf("%s",citta);
+      lookForCity(citta);
+        break;
+    }//fine switch
+  } while(choice != 0);
   return 0;
-}
+}//fine main
 
 void getSupermarket(supermarket VETT[],int i){
   supermarket info;

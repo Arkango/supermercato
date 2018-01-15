@@ -1,0 +1,15 @@
+/var/www/html/supermercato/supermercato.c: In function ‘main’:
+/var/www/html/supermercato/supermercato.c:68:11: warning: implicit declaration of function ‘showSupermarketMaxEmployeers’ [-Wimplicit-function-declaration]
+           showSupermarketMaxEmployeers();
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/var/www/html/supermercato/supermercato.c:73:11: warning: implicit declaration of function ‘lookForName’ [-Wimplicit-function-declaration]
+           lookForName(nome);
+           ^~~~~~~~~~~
+/var/www/html/supermercato/supermercato.c:78:7: warning: implicit declaration of function ‘lookForCity’ [-Wimplicit-function-declaration]
+       lookForCity(citta);
+       ^~~~~~~~~~~
+/tmp/ccJGZLZl.o: In function `main':
+supermercato.c:(.text+0xd5): undefined reference to `showSupermarketMaxEmployeers'
+supermercato.c:(.text+0x10c): undefined reference to `lookForName'
+supermercato.c:(.text+0x143): undefined reference to `lookForCity'
+collect2: error: ld returned 1 exit status
