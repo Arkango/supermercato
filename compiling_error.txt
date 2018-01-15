@@ -1,0 +1,6 @@
+/var/www/html/supermercato/supermercato.c:28:3: error: expected identifier or ‘(’ before ‘char’
+   char[50] name,
+   ^~~~
+/var/www/html/supermercato/supermercato.c:34:2: error: expected ‘;’ before ‘supermarket’
+ }supermarket;
+  ^~~~~~~~~~~

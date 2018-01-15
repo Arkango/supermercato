@@ -25,10 +25,10 @@
 //definizione tipi
 typedef struct{
   int codice,
-  char[50] name,
-  char[50] surname,
-  char[50] address,
-  char[50] city,
+  char name[50],
+  char surname[50],
+  char address[50],
+  char city[50],
   int n_employers,
   int revenue
 }supermarket;
@@ -63,6 +63,6 @@ void getSupermarket(i){
   //procedura che riempie l'array dei supermermercati
   printf("Inserisci supermecato con codice %d \n",i+1);
   info.codice = i;
-  
+
 
 }
