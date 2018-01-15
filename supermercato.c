@@ -24,13 +24,13 @@
 
 //definizione tipi
 typedef struct{
-  int codice,
-  char name[50],
-  char surname[50],
-  char address[50],
-  char city[50],
-  int n_employers,
-  int revenue
+  int codice;
+  char name[50];
+  char surname[50];
+  char address[50];
+  char city[50];
+  int n_employers;
+  int revenue;
 }supermarket;
 
 //prototipi funzioni/procedure
@@ -39,14 +39,15 @@ void getSupermarket(int i);
 //programma principale
 int main(){
 
-  int N;
+  int N,i;
   supermarket SUPER[MAXVALORI];
 
   do{
     printf("Inserisci il numero di supermercati sui quali operare\n");
     scanf("%d",&N);
-    if(N <= 0  || N > MAXVALORI)
-          printf("\n Il valore immesso non e' corretto", );
+    if(N <= 0  || N > MAXVALORI){
+          printf("\n Il valore immesso non e' corretto");
+        }
   }while(N <= 0  || N > MAXVALORI);
 
   printf("Inserisci supermercati\n");

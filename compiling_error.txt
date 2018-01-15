@@ -1,6 +1,15 @@
-/var/www/html/supermercato/supermercato.c:28:3: error: expected identifier or ‘(’ before ‘char’
-   char[50] name,
+/var/www/html/supermercato/supermercato.c: In function ‘main’:
+/var/www/html/supermercato/supermercato.c:56:15: error: void value not ignored as it ought to be
+       SUPER[i]=getSupermarket(i);
+               ^
+/var/www/html/supermercato/supermercato.c: In function ‘getSupermarket’:
+/var/www/html/supermercato/supermercato.c:62:6: warning: type of ‘i’ defaults to ‘int’ [-Wimplicit-int]
+ void getSupermarket(i){
+      ^~~~~~~~~~~~~~
+/var/www/html/supermercato/supermercato.c:65:3: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘printf’
+   printf("Inserisci supermecato con codice %d \n",i+1);
+   ^~~~~~
+/var/www/html/supermercato/supermercato.c:66:3: error: ‘info’ undeclared (first use in this function)
+   info.codice = i;
    ^~~~
-/var/www/html/supermercato/supermercato.c:34:2: error: expected ‘;’ before ‘supermarket’
- }supermarket;
-  ^~~~~~~~~~~
+/var/www/html/supermercato/supermercato.c:66:3: note: each undeclared identifier is reported only once for each function it appears in
