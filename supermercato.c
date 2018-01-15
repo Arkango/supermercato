@@ -34,7 +34,7 @@ typedef struct{
 }supermarket;
 
 //prototipi funzioni/procedure
-void getSupermarket(int i);
+void getSupermarket(supermarket VETT[],int i);
 
 //programma principale
 int main(){
@@ -46,24 +46,34 @@ int main(){
     printf("Inserisci il numero di supermercati sui quali operare\n");
     scanf("%d",&N);
     if(N <= 0  || N > MAXVALORI){
-          printf("\n Il valore immesso non e' corretto");
+          printf("\n Il valore immesso non e' corretto\n");
         }
   }while(N <= 0  || N > MAXVALORI);
 
   printf("Inserisci supermercati\n");
 
   for (i = 0; i < N; i++) {
-      SUPER[i]=getSupermarket(i);
+      getSupermarket(SUPER,i);
   }
 
   return 0;
 }
 
-void getSupermarket(i){
-  supermarket info
+void getSupermarket(supermarket VETT[],int i){
+  supermarket info;
   //procedura che riempie l'array dei supermermercati
-  printf("Inserisci supermecato con codice %d \n",i+1);
+  printf("Stai inserendo il supermecato con codice %d \n",i+1);
   info.codice = i;
+  printf("Inserisci nome responsabile\n");
+  scanf("%s",info.name);
+  printf("Inserisci cognome responsabile\n");
+  scanf("%s",info.surname);
+  printf("Inserisci indirizzo responsabile\n");
+  scanf("%s",info.address);
+  printf("Inserisci citta' responsabile\n");
+  scanf("%s",info.city);
 
 
+
+  VETT[i] = info;
 }
