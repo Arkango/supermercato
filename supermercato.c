@@ -56,7 +56,7 @@ int main(){
         }
   }while(N <= 0  || N > MAXVALORI);
 
-  printf("Inserisci supermercati\n\n");
+  printf("\nInserisci supermercati\n");
 
   for (i = 0; i < N; i++) {//inserimento supermercati
       getSupermarket(SUPER,i);
@@ -66,7 +66,8 @@ int main(){
     printf("****  Menu' (alla scelta termina programma vedrai sup. con max dipendenti) ****\n");
     printf("****  0 termina programma  ****\n");
     printf("****  1 cerca per nome supervisore supermercati corrrelati  ****\n");
-    printf("****  2 cerca supermercati nella citta'  ****\n");
+    printf("****  2 cerca supermercati nella citta'  ****\n\n");
+    scanf("%d",&choice);
     switch (choice) {
       case 0:
           showSupermarketMaxEmployeers(SUPER,N);
@@ -95,7 +96,7 @@ void getSupermarket(supermarket VETT[],int i){
   scanf("%s",info.name);
   printf("Inserisci cognome responsabile\n");
   scanf("%s",info.surname);
-  printf("Inserisci indirizzo responsabile\n");
+  printf("Inserisci indirizzo supermecato\n");
   scanf("%s",info.address);
   printf("Inserisci citta' responsabile\n");
   scanf("%s",info.city);
@@ -114,7 +115,7 @@ void showSupermarketMaxEmployeers(supermarket VETT[],int N){
   int i;
   for (i = 0; i < N; i++) {
     if(VETT[i].n_employers == maxEmployeers){
-      printf("il supermercato con codice %d ha il numero di dipendenti massimo\n",i+1);
+      printf("\nil supermercato con codice %d ha il numero di dipendenti massimo\n",i+1);
     }
   }
 }

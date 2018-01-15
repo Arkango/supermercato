@@ -1,5 +1,0 @@
-/tmp/cc6W5TGo.o: In function `main':
-supermercato.c:(.text+0xd5): undefined reference to `showSupermarketMaxEmployeers'
-supermercato.c:(.text+0x107): undefined reference to `lookForName'
-supermercato.c:(.text+0x139): undefined reference to `lookForCity'
-collect2: error: ld returned 1 exit status
