@@ -34,7 +34,7 @@ typedef struct{
 }supermarket;
 
 //prototipi funzioni/procedure
-void getSupermarket(supermarket VETT[],int i);
+void getSupermarket(int i);
 
 //programma principale
 int main(){
@@ -52,14 +52,17 @@ int main(){
   printf("Inserisci supermercati\n");
 
   for (i = 0; i < N; i++) {
-      SUPER[i]=getSupermarket(SUPER,i);
+      SUPER[i]=getSupermarket(i);
   }
 
   return 0;
 }
 
-void getSupermarket(supermarket VETT[],int i){
+void getSupermarket(i){
+  supermarket info
   //procedura che riempie l'array dei supermermercati
   printf("Inserisci supermecato con codice %d \n",i+1);
-  VETT[i].codice = i;
+  info.codice = i;
+  
+
 }
